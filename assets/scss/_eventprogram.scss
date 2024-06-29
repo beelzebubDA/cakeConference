@@ -1,0 +1,220 @@
+.white {}
+
+.blue {}
+
+.eventprogram {
+    &_block {
+    }
+
+    &_item {
+        position: relative;
+
+        @include tab75 {
+            padding-left: 24px !important;
+            padding-right: 24px !important;
+        }
+
+        @include tab62 {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        &.white {
+            background-color: #fff;
+            color: #1d1d1f;
+            padding: 100px 0 80px;
+
+            @include mobile47 {
+                padding: 52px 0 40px;
+            }
+
+            .eventprogram_left--title {
+                span {
+                    background: #f69b48;
+                    background: linear-gradient(81deg,#f7d27c 6.19%,#faa577 48.86%,#f27276 94.2%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        &.blue {
+            background: linear-gradient(0deg, rgba(0, 0, 0, .4), rgba(0, 0, 0, .4)), linear-gradient(90deg, #04060c 0, #081946 117.44%);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            padding: 40px 0 64px;
+
+            .eventprogram_left--title {
+                span {
+                    background: #317dff;
+                    background: linear-gradient(269deg,#506ad4 23.58%,#ef38f2 139.51%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            @include mobile47 {
+                padding: 52px 0 40px;
+            }
+        }
+    }
+
+    &_sides {
+        display: flex;
+        justify-content: space-between;
+
+        @include tab62 {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &_left {
+        margin-right: 40px;
+
+        @include tab62 {
+            margin-right: 0;
+        }
+    }
+
+    &_left--title {
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 52px;
+        margin-bottom: 40px;
+
+        @include tab62 {
+            text-align: center;
+        }
+
+        @include mobile47 {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 32px;
+            letter-spacing: 0;
+        }
+    }
+
+    &_right {
+        width: 869px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        align-items: start;
+        justify-content: start;
+
+        @include tab75 {
+            max-width: 550px;
+        }
+
+        @include tab62 {
+            max-width: 100%;
+            width: 100%;
+        }
+
+        @include mobile47 {
+            gap: 24px;
+        }
+    }
+
+    &_right--item {
+        display: flex;
+        align-items: center;
+    }
+
+    &_right--item-time {
+        width: 136px !important;
+        min-width: 136px;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: end;
+
+        @include tab62 {
+            display: none;
+        }
+    }
+
+    &_right--item-time_main {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0;
+    }
+
+    &_right--item-time_duration {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: .2px;
+        opacity: .72;
+    }
+
+    &_right--item-img {
+        margin: 0 28px 0 50px;
+        width: 72px;
+        height: 72px;
+        min-width: 72px;
+
+        @include mobile47 {
+            width: 56px;
+            min-width: 56px;
+            margin: 0 32px 0 0;
+        }
+    }
+
+    &_right--item-info {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+
+        .eventprogram_right--item-info-time {
+            display: none;
+
+            @include tab62 {
+                display: block;
+            }
+
+            @include mobile47 {
+                font-size: 13px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: .2px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+
+    &_right--item-info-top {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 31px;
+        letter-spacing: 0;
+        margin-bottom: 4px;
+
+        @include mobile47{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 138%;
+            letter-spacing: .15px;
+        }
+    }
+
+    &_right--item-info-bottom {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: .2px;
+        opacity: .6;
+
+        @include mobile47 {
+            font-size: 13px;
+            line-height: 20px;
+            letter-spacing: .2px;
+            opacity: .72;
+        }
+    }
+}

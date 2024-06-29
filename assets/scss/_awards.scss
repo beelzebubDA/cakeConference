@@ -1,0 +1,305 @@
+.awards {
+
+    padding: 140px 0 20px;
+    overflow-y: hidden;
+    position: relative;
+
+    @include tab62 {
+        padding: 120px 0 20px;
+    }
+
+    @include mobile47 {
+        padding: 52px 0 24px;
+    }
+
+    @include mobile35 {
+        .container {
+
+        }
+    }
+
+    &_block {}
+
+    &_sides {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 40px;
+
+        @include tab62 {
+            flex-direction: column;
+        }
+    }
+
+    &_left {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include tab62 {
+            width: 100%;
+            align-items: center;
+        }
+    }
+
+    &_left--title {
+        font-size: 46px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 52px;
+
+        span {
+            background: radial-gradient(280.75% 120.18% at 4.69% 8.47%,#f5e27b 0,#ec7777 26.74%,#c259c3 52.26%,#8b68f0 77.06%,#6cadf9 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        @include mobile47 {
+            font-size: 28px;
+            font-weight: 500;
+            line-height: 116%;
+            text-align: center;
+        }
+    }
+
+    &_left--info {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        @include tab62 {
+            flex-direction: row;
+        }
+
+        @include mobile47 {
+            gap: 20px;
+        }
+    }
+
+    &_left--info-item {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        @include mobile47 {
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &_left--info-icon {}
+
+    &_left--info-text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &_left--info-numb {
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 31px;
+        letter-spacing: 0;
+
+        @include mobile47 {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: .2px;
+            text-align: center;
+        }
+    }
+
+    &_left--info-span {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: .2px;
+        opacity: .8;
+
+        @include mobile47 {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+
+    &_right {
+        max-width: 840px;
+        flex-grow: 1;
+    }
+
+    &_right--items {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 120px;
+        margin-bottom: 120px;
+
+        @include tab62 {
+            margin-bottom: 100px;
+            gap: 80px;
+        }
+
+        @include mobile47 {
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &_right--item {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include mobile47 {
+            gap: 16px;
+        }
+    }
+
+    &_right--item-title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 36px;
+        letter-spacing: .1px;
+        margin-top: 6px;
+
+        @include tab62 {
+            text-align: center;
+        }
+
+        @include mobile47 {
+            font-size: 21px;
+            line-height: 40px;
+        }
+
+        &.violet {
+            color: #8556fc;
+        }
+
+        &.blue {
+            color: #4253eb;
+        }
+    }
+
+    &_right--item-top {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 16px;
+
+        .awards_right--item-title {
+            font-size: 21px;
+            font-weight: 500;
+            line-height: 31px;
+            letter-spacing: 0;
+            color: #Fff;
+            margin-top: 0;
+
+            @include mobile47 {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 26px;
+                letter-spacing: .2px;
+            }
+        }
+    }
+
+    &_right--item-icon {
+        padding: 10px;
+        background: #0a1126;
+
+        @include mobile47 {
+            width: 44px;
+            height: 44px;
+        }
+    }
+
+    &_right--item-lists {
+        display: flex;
+        gap: 18px;
+    }
+
+    &_right--item-list {
+        display: flex;
+        gap: 8px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &_right--item-li {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: .2px;
+        position: relative;
+        padding-left: 8px;
+
+        &::marker {
+            content: '•';
+            width: 4px;
+            height: 4px;
+            position: absolute;
+        }
+
+        span {
+            display: inline-block;
+            margin-left: 4px;
+            padding: 0 8px 0 6px;
+            background: #0f133a;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 20px;
+            letter-spacing: .2px;
+        }
+    }
+}
+
+.award {
+    &_right--item-contents {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    &_right--item-content {
+        padding: 36px 40px;
+        background: #01040b;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @include mobile47 {
+            padding: 20px 20px 24px;
+        }
+    }
+}
+
+.item {
+    &_full {
+        width: 100%;
+
+        @include mobile35 {
+            .awards_right--item-lists {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+
+        .awards_right--item-list {
+            width: calc(100% / 3 - 6px);
+
+            @include mobile35 {
+                width: 100%;
+            }
+        }
+    }
+
+    &_half {
+        width: calc(50% - 2px);
+
+        @include mobile35 {
+            width: 100%;
+        }
+    }
+}

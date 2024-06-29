@@ -1,0 +1,245 @@
+.header {
+  height: 80px;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.25s;
+  display: none;
+
+  @include tab75 {
+    .header_block {
+      padding: 0 24px;
+    }
+  }
+
+  @include tab62 {
+    .header_block {
+      padding: 0;
+    }
+  }
+
+  @include mobile35 {
+    height: 64px;
+  }
+
+  &.active {
+    display: block;
+
+    &.opacity {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, .84);
+      -webkit-backdrop-filter: blur(52px);
+      backdrop-filter: blur(52px);
+    }
+
+    &.opacityD {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, .84);
+      -webkit-backdrop-filter: blur(52px);
+      backdrop-filter: blur(52px);
+    }
+  }
+}
+
+.header {
+  &_block {
+    height: 100%;
+    z-index: 15;
+
+    .header {
+      &_mobile--menu {
+        position: absolute;
+        top: 64px;
+        left: 0;
+        right: 0;
+        max-height: calc(100vh - 64px);
+        background: linear-gradient(90deg, #04060c 0, #081946 117.44%);
+        overflow: scroll;
+        border-top: 1px solid #283555;
+        transform: translateY(calc(-100% - 64px));
+        height: 365px;
+        z-index: 5;
+        transition: transform .4s;
+        display: none;
+        box-shadow: 0 3px 12px rgba(0,0,0,.1);
+        overflow-x: hidden;
+
+        &.active {
+          display: flex;
+          flex-direction: column;
+          transform: translateY(0);
+        }
+
+        .header_mobile--divide {
+          height: 1px;
+          width: 100%;
+          background-color: #f6f7f9;
+          opacity: .1;
+          transform: scaleX(2);
+          margin-bottom: 20px;
+        }
+      }
+
+      &_mobile--lists {
+        padding: 0 16px;
+      }
+
+      &_mobile--list {
+
+        &:first-child {
+          padding-top: 4px;
+        }
+
+        &:last-child {
+          a {
+            padding-bottom: 24px;
+          }
+        }
+
+        a {
+          padding: 16px 0;
+          width: 100%;
+          display: block;
+          font-size: 15px;
+          color: white;
+        }
+      }
+
+      &_mobile--action {
+        width: 100%;
+        padding: 16px 0;
+        height: max-content;
+        text-align: center;
+      }
+
+      &_mobile--reg-btn {
+        padding: 18px 40px;
+        max-width: 237px !important;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 136%;
+        letter-spacing: .28px;
+        background: #4070f4;
+        color: white;
+        border-radius: 51px;
+        transition: background .25s;
+      }
+    }
+  }
+
+  &_desc {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mobile35 {
+      height: 64px;
+    }
+  }
+
+  &_desc-left {
+    display: flex;
+
+    .logo1 {
+      display: none;
+    }
+
+    .span {
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 21px;
+      letter-spacing: .2px;
+      color: #fff;
+      padding: 6px 10px;
+      background: #4070f4;
+      text-transform: uppercase;
+      margin-left: 10px;
+      display: none;
+    }
+
+    .header_info {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 10px;
+      margin: 0 auto 0 16px;
+      background: #0f133a;
+      opacity: 1;
+
+      @include mobile47 {
+        margin: 0 auto 0 8px;
+      }
+
+      .header_info--span {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: .2px;
+        color: #3796f6;
+        transition: opacity .25s;
+
+        @include mobile47 {
+          line-height: 18px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &_desc--logo {
+
+    @include mobile35 {
+      max-width: 92px;
+    }
+  }
+
+  &_desc-right {
+
+    @include mobile35 {
+      display: none;
+    }
+  }
+
+  &_desc-reg {
+    background: #4070f4 !important;
+    transition: background 0.25s;
+    font-size: 14px;
+    line-height: 20.5px;
+    letter-spacing: 0.2px;
+    padding: 16px 36px;
+    background: 0 0;
+    transition: opacity 0.25s;
+    color: #fff;
+    border-radius: 30px;
+    opacity: 1;
+  }
+
+  .header_mobile--btn {
+
+    display: none;
+
+    @include mobile35 {
+      display: block;
+      width: 24px;
+      height: 24px;
+    }
+
+    .close {
+      display: none;
+    }
+
+    &.active {
+      .close {
+        display: block;
+      }
+
+      .open {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,135 @@
+.cakeconfhistory {
+  padding: 120px 0 140px;
+  background: linear-gradient(90deg, #04060c 0, #081946 117.44%);
+  overflow-x: hidden !important;
+
+  @include mobile47 {
+    padding: 52px 0 64px;
+  }
+
+  .cakeconfhistory_swiper {
+    .cakeconfhistory_swiper--title-block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 16px;
+      max-width: 1400px;
+      margin: 0 auto;
+      margin-bottom: 100px;
+
+      @include mobile47 {
+        margin-bottom: 52px;
+        justify-content: center;
+      }
+
+      .cakeconfhistory_swiper--btns {
+        position: relative;
+        display: flex;
+        gap: 16px;
+        align-items: center;
+
+        @include mobile47 {
+          display: none;
+        }
+
+        .cakeconfhistory_swiper--btn {
+          padding: 4px;
+          border-radius: 88px;
+          border: 1px solid #fff;
+          cursor: pointer;
+
+          &::after {
+            display: none;
+          }
+
+          &.next {
+            rotate: 180deg;
+          }
+        }
+      }
+
+    }
+
+    .cakeconfhistory_swiper--title {
+      font-size: 46px;
+      font-weight: 500;
+      line-height: 52px;
+      background: radial-gradient(
+        50.75% 120.18% at 4.69% 8.47%,
+        #f5e27b 0,
+        #ec7777 26.74%,
+        #c259c3 52.26%,
+        #8b68f0 77.06%,
+        #6cadf9 100%
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      max-width: 1400px;
+
+      @include tab62 {
+        max-width: 500px;
+      }
+
+      @include mobile47 {
+        font-size: 28px;
+        line-height: 116%;
+        text-align: center;
+      }
+    }
+
+    .cakeconfhistory_swiper--wrapper {
+      display: flex;
+      align-items: center;
+      position: relative;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      padding: 0 20px;
+      scrollbar-width: none;
+
+      .cakeconfhistory_swiper--slide {
+        flex-shrink: 0;
+
+        img {
+          width: 320px;
+          margin: 0 18px;
+        }
+      }
+    }
+
+    .cakeconfhistory_swiper--info {
+      font-size: 21px;
+      font-weight: 400;
+      line-height: 31px;
+      letter-spacing: 0;
+      max-width: 590px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 16px;
+      margin-top: 100px;
+
+      @include mobile47 {
+        font-size: 18px;
+        line-height: 144%;
+        letter-spacing: .18px;
+        margin-top: 52px;
+      }
+
+      @include mobile35 {
+        font-size: 18px;
+        line-height: 144%;
+        letter-spacing: .18px;
+      }
+      
+      .cakeconfhistory_swiper--info-text {
+        @include mobile35 {
+          display: contents;
+        }
+        span {
+          color: #4070f4;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,119 @@
+.freevip {
+    background-color: #fff;
+    padding: 120px 0 140px;
+    color: #1d1d1f;
+
+    @include mobile47 {
+        padding: 52px 0 64px;
+    }
+
+    &_block {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+
+        @include tab75 {
+            padding: 0 24px;
+            gap: 40px;
+        }
+
+        @include tab62 {
+            padding: 0;
+        }
+
+        @include mobile47 {
+            flex-direction: column;
+            gap: 32px;
+        }
+    }
+
+    &_left {
+        @include mobile47 {
+            width: 100%;
+            text-align: center;
+        }
+    }
+
+    &_left-title {
+        font-size: 46px;
+        font-weight: 500;
+        line-height: 52px;
+        max-width: 354px;
+
+        @include mobile47 {
+            font-size: 28px;
+            line-height: 32px;
+            letter-spacing: 0;
+            max-width: 200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    &_right {
+        max-width: 869px;
+
+        @include tab75 {
+            max-width: 100%;
+        }
+    }
+
+    &_right--title {
+        font-size: 30px;
+        line-height: 40px;
+        font-weight: 500;
+        margin-bottom: 32px;
+        width: 80%;
+
+        @include tab75 {
+            width: 100%;
+        }
+
+        @include mobile47 {
+            font-size: 21px;
+            letter-spacing: .21px;
+            line-height: 135%;
+            margin-bottom: 16px;
+        }
+
+        span {
+            color: #4070f4;
+        }
+    }
+
+    &_right--text {
+        font-size: 21px;
+        font-weight: 400;
+        line-height: 31px;
+        margin-bottom: 18px;
+        width: 81%;
+
+        @include mobile47 {
+            font-size: 18px;
+            line-height: 26px;
+            letter-spacing: .01em;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        @include tab75 {
+            width: 100%;
+        }
+
+        @include tab62 {
+            width: 95%;
+        }
+
+        img {
+            display: inline;
+            position: relative;
+            top: 8px;
+        }
+
+        b {
+            font-weight: 500;
+        }
+    }
+}

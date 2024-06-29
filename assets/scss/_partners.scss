@@ -1,0 +1,102 @@
+.partners {
+
+    padding: 120px 0 140px;
+    color: #1d1d1f;
+    background-color: #fff;
+    overflow: hidden;
+
+    @include mobile47 {
+        padding: 52px 0 64px;
+    }
+
+    .partners_block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 92px;
+
+        @include tab75 {
+            padding: 0 24px;
+        }
+
+        @include tab62 {
+            padding: 0;
+        }
+
+        @include mobile47 {
+            gap: 52px;
+        }
+        .partners_block--title {
+            font-size: 46px;
+            font-weight: 500;
+            line-height: 52px;
+            text-align: center;
+            max-width: 760px;
+
+            span {
+                color: #4070f4;
+            }
+
+            @include mobile47 {
+                font-size: 28px;
+                font-weight: 500;
+                line-height: 32px;
+                letter-spacing: 0;
+            }
+        }
+
+        .partners_items {
+
+            display: flex;
+            flex-wrap: wrap;
+            margin: -38px -30px;
+            justify-content: space-between;
+            align-items: center;
+
+            @include mobile47 {
+                display: grid;
+                grid-auto-flow: column;
+                grid-auto-columns: 24%;
+                grid-template-rows: repeat(6, auto);
+                margin: -18px -12px;
+                -moz-column-gap: 24px;
+                column-gap: 24px;
+                animation: 100s linear infinite scroll;
+                width: 100%;
+            }
+
+            @include mobile35 {
+                column-gap: 50px;
+            }
+
+            .partners_item {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include mobile47 {
+                    width: 144px;
+                }
+
+                img {
+                    padding: 38px 30px;
+
+                    @include mobile47 {
+                        padding: 18px 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(24%)
+    }
+
+    100% {
+        transform: translateX(calc(-24% * 48))
+    }
+}

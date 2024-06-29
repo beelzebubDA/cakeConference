@@ -1,0 +1,179 @@
+.mvpgroup {
+
+    .mvpgroup_video {
+
+        .mvpgroup_video--wrapper {
+            height: 849px;
+            width: 100%;
+            position: absolute;
+            padding: 0;
+            overflow: hidden;
+
+            @include mobile47 {
+                height: 565px;
+            }
+
+            iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            
+            .mvpgroup_video--shadow {
+                position: absolute;
+                top: -2px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,.8);
+            }
+        }
+
+        iframe {
+            height: 150%!important;
+            top: -25%!important;
+            width: 300%!important;
+            left: -100%!important;
+        }
+    }
+
+    .mvpgroup_block {
+        position: relative;
+        z-index: 2;
+        padding: 120px 16px 140px 16px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+
+        @include mobile47 {
+            padding: 40px 0 64px;
+        }
+
+
+        .mvpgroup_block--title {
+            text-align: center;
+            margin-bottom: 120px;
+
+            @include mobile47 {
+                margin-bottom: 0;
+            }
+
+            .mvpgroup_block--title-text {
+                font-size: 46px;
+                font-weight: 500;
+                line-height: 52px;
+
+                // @include tab62 {
+                //     font-size: 28px;
+                //     line-height: 32px;
+                //     letter-spacing: 0;
+                //     margin: 0 auto 32px;
+                // }
+
+                @include mobile47 {
+                    font-size: 28px;
+                    font-weight: 500;
+                    line-height: 32px;
+                    letter-spacing: 0;
+                    margin: 0 auto 32px;
+                }
+
+                span {
+                    background: radial-gradient(140.75% 120.18% at 4.69% 8.47%,#f5e27b 0,#ec7777 26.74%,#c259c3 52.26%,#8b68f0 77.06%,#6cadf9 100%);
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+        }
+
+        .mvpgroup_block--main {
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .mvpgroup_wrapper {
+            display: flex;
+            position: relative;
+            align-items: center;
+            width: 1212px;
+            min-height: 365px !important;
+            height: 365px;
+
+            @include mobile47 {
+                height: 350px;
+                width: 100%;
+            }
+
+            .mvpgroup_slide {
+                width: calc(100% / 3.8875) !important;
+                height: auto;
+                flex-shrink: 0;
+                position: relative;
+                transition: .5s ease-in-out;
+                background-size: 100% auto;
+                
+                @include mobile47 {
+                    width: 100%;
+                }
+
+                &::after {
+                    display: block;
+                    position: absolute;
+                    content: '';
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(0deg,#050e25 0,#050e25 100%);
+                    mix-blend-mode: color;
+                    transition: background-color 1s;
+                }
+
+                &.swiper-slide-active {
+                    width: calc(100% / 2.25) !important;
+
+                    &::after {
+                        background: 0 0;
+                    }
+
+                    @include mobile47 {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+
+        .mvpgroup_btns {
+
+            @include mobile47 {
+                display: none;
+            }
+
+
+            .mvpgroup_btn {
+                position: absolute;
+                z-index: 3;
+                display: block;
+                padding: 8px;
+                border-radius: 88px;
+                border: 1px solid #fff;
+                cursor: pointer;
+                flex-shrink: 0;
+                left: 30px;
+                top: 60%;
+
+                &.mvpgroup-next {
+                    rotate: 180deg;
+                    left: auto;
+                    right: -30px;
+                }
+
+            }
+        }
+    }
+}
